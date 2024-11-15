@@ -46,10 +46,3 @@ admin.messaging().send(message).then(response => {
 }).catch(error => {
   console.log('Erreur d\'envoi de notification', error);
 });
-
-
-// Connection à mongoDB
-const mongoose = require('mongoose');
-mongoose.connect(process.env.DB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log('Connecté à MongoDB'))
-  .catch(err => console.log('Erreur MongoDB:', err));
